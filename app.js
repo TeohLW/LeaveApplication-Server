@@ -40,7 +40,7 @@ app.use(async (ctx, next) => {
   await next().catch((err) => {
     if (err.status == '401') {
       ctx.status = 200;
-      ctx.body = util.fail('Token认证失败', util.CODE.AUTH_ERROR)
+      ctx.body = util.fail('Tokenfail', util.CODE.AUTH_ERROR)
     } else {
       throw err;
     }
